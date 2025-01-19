@@ -20,19 +20,19 @@ const Contact = () => {
         <form>
           <div className={styles.formGroup}>
             <label htmlFor="name">Name</label>
-            <input type="text" id="name" placeholder="Enter your name" />
+            <input className={styles.input} type="text" id="name" placeholder="Enter your name" />
           </div>
           <div className={styles.formGroup}>
             <label htmlFor="email">Email</label>
-            <input type="email" id="email" placeholder="Enter your email" />
+            <input className={styles.input} type="email" id="email" placeholder="Enter your email" />
           </div>
           <div className={styles.formGroup}>
             <label htmlFor="subject">Subject</label>
-            <input type="text" id="subject" placeholder="Enter subject" />
+            <input className={styles.input} type="text" id="subject" placeholder="Enter subject" />
           </div>
           <div className={styles.formGroup}>
             <label htmlFor="message">Message</label>
-            <textarea id="message" placeholder="Enter your message"></textarea>
+            <textarea className={styles.textarea} id="message" placeholder="Enter your message"></textarea>
           </div>
           <button type="submit" className={styles.button}>
             SEND MESSAGE
