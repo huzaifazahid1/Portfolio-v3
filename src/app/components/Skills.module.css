@@ -1,0 +1,173 @@
+.info{
+  width: 50%;
+  margin: auto;
+  color: #ccc;
+  font-size: 22px;
+  line-height: 1.3;
+}
+@media (max-width:750px) {
+  .info{
+    width: 80%;
+    font-size: 20px;
+  }
+}
+.skills {
+  text-align: center;
+  display: flex;
+justify-content: center;
+align-items: center;
+gap: 40px;
+  margin: 50px 0;
+  flex-wrap: wrap;
+}
+
+.barContainer,
+.circularBarContainer {
+  display: flex;
+}
+.barContainer{
+  flex-wrap: wrap;
+  width: 100%;
+  /* max-width: 55%; */
+  /* flex: 0 0 55%; */
+}
+.circularBarContainer{
+  flex-wrap: wrap;
+  display: flex;
+  gap: 20px;
+  /* max-width: 35%; */
+  /* flex: 0 0 35%; */
+}
+.bar {
+  max-width: 30%;
+  flex: 0 0 30%;
+  margin: 0 10px;
+  margin-bottom: 40px;
+}
+@media (max-width:990px) {
+  .bar{
+    max-width: 45%;
+    flex: 0 0 45%;
+  }
+}
+@media (max-width:550px) {
+  .bar{
+    max-width: 90%;
+    flex: 0 0 90%;
+  }
+}
+.skillName {
+  display: block;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.progressBar {
+  width: 100%;
+  height: 10px;
+  background-color: #333;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  width: var(--percent);
+  background-color:#ec8208;
+  transition: width 0.3s ease;
+}
+
+.value {
+  display: block;
+  margin-top: 5px;
+  color: white;
+  font-size: 0.8rem;
+}
+
+/* .circularBar {
+  text-align: center;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #333;
+  position: relative;
+}
+
+.progressCircle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  clip-path: polygon(
+    50% 50%,
+    50% 0,
+    calc(50% + var(--percentage) / 2) calc(50% - var(--percentage) / 2)
+  );
+  background-color: #ec8208;
+  transform: rotate(-90deg);
+} */
+
+.circle_wrap {
+  margin: 10px auto;
+  width: 150px;
+  height: 150px;
+  background: #272727;
+  border-radius: 50%;
+  border: 1px solid #cdcbd0;
+}
+
+.circle_wrap .circle .mask,
+.circle_wrap .circle .fill {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle_wrap .circle .mask {
+  clip: rect(0px, 150px, 150px, 75px);
+}
+
+.circle_wrap .inside_circle {
+  width: 122px;
+  height: 122px;
+  border-radius: 50%;
+  background:black;
+  line-height: 120px;
+  text-align: center;
+  margin-top: 14px;
+  margin-left: 14px;
+  color: #ec8208;
+  position: absolute;
+  z-index: 100;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+/* color animation */
+
+/* 3rd progress bar */
+.mask .fill {
+  clip: rect(0px, 75px, 150px, 0px);
+  background-color: #ec8208;
+}
+
+.mask.full,
+.circle .fill {
+  animation: fill ease-in-out 3s;
+  /* transform: rotate(130deg); */
+}
+
+/* @keyframes fill{
+  0% {
+    transform: rotate(var(--percentage)deg);
+  }
+  100% {
+    transform: rotate(var(--percentage)deg);
+  }
+} */

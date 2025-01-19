@@ -1,0 +1,157 @@
+
+.contact {
+  display: flex;
+  justify-content:center;
+  margin: 50px 0;
+  gap: 50px;
+  /* align-items: center; */
+  width: 100%;
+  /* flex-wrap: wrap; */
+  margin-left: 40px;
+}
+
+.contact form {
+  width: 60%;
+  flex: 0 0 60%;
+  background-color: #292828;
+  padding: 40px;
+  border-radius: 20px;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+  
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 5px;
+  color: rgb(138, 135, 135);
+  margin-left: 5px;
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  color: #8b8b8b;
+  padding: 10px;
+  border: 1px solid #292828;
+  background-color: rgb(17, 17, 17);
+  border-radius: 3px;
+}
+textarea:focus,input:focus{
+  outline: none;
+}
+.formGroup textarea {
+  height: 100px;
+}
+
+.button {
+  background-color: #ec8208;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  font-size: 12px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.contactInfo {
+  width: 35%;
+  flex: 0 0 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* justify-content: space-between; */
+}
+
+.contactItem {
+  width: 60%;
+  margin-right: 20px;
+
+  background-color: #292828;
+  
+  padding:20px;
+  border-radius: 20px;
+}
+.contactItem h3{
+  color: white;
+}
+.contactItem p{
+  font-size: 13px;
+  margin-bottom: 10px;
+
+  color: #8b8b8b;
+}
+.contactItem p:nth-child(1){
+  color: white;
+}
+.contactItem:last-child {
+  margin-right: 0;
+}
+.contact_icon{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px auto;
+  margin-bottom: 20px;
+  background-color: #ec8208;
+  padding: 5px;
+  height: 28px;
+  width: 28px;
+  /* font-size: 30px; */
+  border-radius: 50%;
+}
+@media (max-width:990px) {
+  .contact{
+    margin-left: 0px;
+    flex-wrap: nowrap !important;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact form{
+    flex: 0 0 60% !important;
+  }
+  .contactInfo{
+    max-width: 30% !important;
+    flex: 0 0 30% !important;
+  }
+  .contactItem{
+    width: 80%;
+  }
+}
+@media (max-width:700px) {
+  .contact{
+    flex-wrap: wrap !important;
+  }
+  .contact form{
+    flex: 0 0 90% !important;
+  }
+  .contactInfo{
+    max-width: 90% !important;
+    flex: 0 0 90% !important;
+  }
+  .contactItem{
+    width: 100% !important;
+  }
+}
+
+
+
+@media (max-width:1100px) {
+  .contact{
+    flex-wrap: wrap;
+    margin-left: 0;
+  }
+  .contact form{
+    flex: 0 0 90%;
+  }
+  .contactInfo{
+    max-width: 90%;
+    flex: 0 0 90%;
+  }
+  .contactItem{
+    width: 100%;
+  }
+}
