@@ -30,8 +30,8 @@
   margin-left: 5px;
 }
 
-.formGroup input,
-.formGroup textarea {
+.formGroup .input,
+.formGroup .textarea {
   width: 100%;
   color: #8b8b8b;
   padding: 10px;
@@ -39,10 +39,10 @@
   background-color: rgb(17, 17, 17);
   border-radius: 3px;
 }
-textarea:focus,input:focus{
+.textarea:focus,.input:focus{
   outline: none;
 }
-.formGroup textarea {
+.formGroup .textarea {
   height: 100px;
 }
 
