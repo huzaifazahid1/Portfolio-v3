@@ -4,29 +4,15 @@ import Testimonials from "./Testimonials";
 
 const testimonials = [
   {
-    name: "Edward Leonard",
-    jobTitle: "Software Engineer",
+    name: "Hamdan Khubaib",
+    jobTitle: "Python & MERN Stack Developer",
+    location:"India",
     image:
       "https://tonu-next.netlify.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fright-img.7ed901a9.png&w=750&q=75", // Replace with actual image path
-    text: "The customer service team was incredibly helpful and went above and beyond to ensure that I had a positive experience with this company.",
+    text: "Skillfully re-created the frontend for several pages, perfectly translating designs into functional interfaces. His talent and attention to detail are outstanding, earning a 5/5 rating.",
     rating: 5,
   },
-  {
-    name: "Edward Leonard",
-    jobTitle: "Software Engineer",
-    image:
-      "https://tonu-next.netlify.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fright-img.7ed901a9.png&w=750&q=75", // Replace with actual image path
-    text: "The customer service team was incredibly helpful and went above and beyond to ensure that I had a positive experience with this company.",
-    rating: 5,
-  },
-  {
-    name: "Edward Leonard",
-    jobTitle: "Software Engineer",
-    image:
-      "https://tonu-next.netlify.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fright-img.7ed901a9.png&w=750&q=75", // Replace with actual image path
-    text: "The customer service team was incredibly helpful and went above and beyond to ensure that I had a positive experience with this company.",
-    rating: 5,
-  },
+
   // Add more testimonial objects here
 ];
 
@@ -44,7 +30,12 @@ const Home = () => {
       </div>
       <div
         className="testimonials"
-        style={{ display: "flex", gap: "20px", margin: "0 20px",flexWrap:"wrap" }}
+        style={{
+          display: "flex",
+          gap: "20px",
+          margin: "0 20px",
+          flexWrap: "wrap",
+        }}
       >
         {testimonials.map((testimonial, index) => (
           <Testimonials key={index} testimonial={testimonial} />

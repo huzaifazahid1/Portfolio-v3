@@ -1,20 +1,18 @@
-
 .hero {
   background-color: #111111; /* Example background color */
   padding: 50px 0;
-  background-image: url("../../../public/bg1.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  margin:20px;
+  margin: 20px 0;
   /* text-align: center; */
   /* height: 70vh; */
   justify-content: space-between;
   align-items: center;
   display: flex;
 }
-@media (max-width:750px){
-  .hero{
+@media (max-width: 750px) {
+  .hero {
     flex-direction: column;
     margin: 0;
   }
@@ -24,10 +22,9 @@
   /* margin: 0 auto; */
   margin-left: 40px;
 }
-.container2{
+.container2 {
   /* flex: 0 0 45%; */
-  margin:auto;
-  
+  margin: auto;
 }
 .hero h1 {
   font-size: 3rem;
@@ -37,7 +34,7 @@
 
   margin-bottom: 20px;
 }
-.hero h2{
+.hero h2 {
   font-size: 2rem;
   font-weight: 500;
   color: white;
@@ -61,30 +58,30 @@
   display: flex;
   align-items: center;
   gap: 15px;
-  transition: all .3s ease;
-}.button:hover{
+  transition: all 0.3s ease;
+}
+.button:hover {
   background-color: #ec932c;
 }
-@media (max-width:550px){
-  .container{
+@media (max-width: 550px) {
+  .container {
     margin-top: 50px;
   }
   .hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-.hero h2{
-  font-size: 1.7rem;
-  margin-bottom: 20px;
-}
-.hero p {
-  font-size: 1rem;
-  color: #afadad;
-  margin-bottom: 30px;
-}
-.container2 .image{
-  width: 350px;
-  height: auto;
-
-}
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  .hero h2 {
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+  }
+  .hero p {
+    font-size: 1rem;
+    color: #afadad;
+    margin-bottom: 30px;
+  }
+  .container2 .image {
+    width: 350px;
+    height: auto;
+  }
 }

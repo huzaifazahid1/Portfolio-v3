@@ -13,7 +13,7 @@ import {
   FaFacebookF,
   FaLinkedinIn,
   // FaEnvelope,
-  FaInstagram,
+  FaGithub,
 } from "react-icons/fa";
 import { FaBars } from "react-icons/fa";
 import { FaTimes } from "react-icons/fa";
@@ -27,7 +27,7 @@ const Sidebar = () => {
   };
   return (
     <>
-      <div style={{ backgroundColor: "red" }}>
+      <div>
         <div className={styles.baricon} onClick={toggleSidebar}>
           {isSidebarOpen ? <FaTimes /> : <FaBars />}
         </div>
@@ -70,7 +70,7 @@ const Sidebar = () => {
             />
           </div>
           <h2>Huzaifa</h2>
-          <p>Frontend Developer</p>
+          <p>MERN Stack Developer</p>
         </div>
         <div
           style={{
@@ -80,7 +80,7 @@ const Sidebar = () => {
           }}
         >
           <a
-            href="https://www.facebook.com/"
+            href="https://www.facebook.com/share/1E6K2VJTuj/"
             target="_blank"
             rel="noopener noreferrer"
             style={{ marginRight: "5px" }}
@@ -88,7 +88,7 @@ const Sidebar = () => {
             <FaFacebookF size={17} style={{ color: "#3b5998" }} />
           </a>
           <a
-            href="https://www.linkedin.com/"
+            href="https://www.linkedin.com/in/huzaifa-zahid-369b4a291?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
             target="_blank"
             rel="noopener noreferrer"
             style={{ marginRight: "10px" }}
@@ -96,17 +96,17 @@ const Sidebar = () => {
             <FaLinkedinIn size={17} style={{ color: "#0077b5" }} />
           </a>
           <a
-            href="mailto:your.email@example.com"
+            href="mailto:zahidhuzaifa006@gmail"
             style={{ marginRight: "10px" }}
           >
             <FaEnvelope size={17} style={{ color: "#ec8208" }} />
           </a>
           <a
-            href="https://www.instagram.com/"
+            href="https://github.com/huzaifazahid1"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaInstagram size={17} style={{ color: "#e4405f" }} />
+            <FaGithub size={17} style={{ color: "#e4405f" }} />
           </a>
         </div>
 

@@ -6,12 +6,35 @@ import im4 from "../../../public/p1.png";
 import Project from "./Project";
 
 const projects = [
+{
+    title: "Weather App",
+    image: im2, // Replace with actual image path
+    description:
+      "A feature-rich weather app with real-time weather updates, 7-day forecast, chatbot support, and much more.",
+    technologies: ["Next JS", "Tailwind css", "modren", "responsive"],
+	github:"#",
+	live:"https://nx-weather-wheat.vercel.app/",
+	badge:"Top"
+  },
+  {
+    title: "AI SaaS Application",
+    image: im4, // Replace with actual image path
+    description:
+      "An AI-powered SaaS application that generates professional blog content in seconds.",
+    technologies: ["Next Js", "Tailwind", "AI", "Firebase"],
+	github:"#",
+	live:"https://blogify-005.vercel.app",
+	badge:"Top"
+  },
   {
     title: "Resturant website",
     image: im3, // Replace with actual image path
     description:
       "Discover delicious cuisine.Find the perfect restaurant for your next dining experience",
     technologies: ["HTML", "CSS", "JS", "UI UX"],
+	github:"https://github.com/huzaifazahid1/Restaurant-website",
+	live:"https://resturant005.netlify.app/",
+	badge:"",
   },
   {
     title: "Recipe Website",
@@ -19,21 +42,11 @@ const projects = [
     description:
       "Explore a world of culinary delights. Find easy-to-follow recipes for every occasion",
     technologies: ["ReactJS", "Redux", "JS"],
+	github:"https://github.com/huzaifazahid1/Recipe-Website-Frontend-",
+	live:"#",
+	badge:""
   },
-  {
-    title: "Education website",
-    image: im2, // Replace with actual image path
-    description:
-      "ABSCO offer unparalleled business consulting solutions to meet client’s unique needs.",
-    technologies: ["HTML", "CSS", "JS", "Bootstrab"],
-  },
-  {
-    title: "Traveling website",
-    image: im4, // Replace with actual image path
-    description:
-      "Plan your next adventure.Discover inspiring travel destinations and book your trip today",
-    technologies: ["HTML", "CSS", "JS"],
-  },
+  
 ];
 
 const Home = () => {
@@ -61,20 +74,22 @@ const Home = () => {
           <Project key={index} project={project} />
         ))}
       </div>
+	  <div style={{
+          textAlign: "center",
+          marginLeft: "auto",
+          marginRight: "auto",
+        }}>
       <a
-        href="#"
+        href="https://github.com/huzaifazahid1" target="_blank"
         style={{
           color: "white",
           lineHeight: "2",
           textDecoration: "underline",
-          textAlign: "center",
-          marginLeft: "auto",
-          marginRight: "auto",
-          display:"block"
         }}
       >
         see all projects
       </a>
+	  </div>
     </div>
   );
 };

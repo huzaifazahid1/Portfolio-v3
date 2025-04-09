@@ -32,7 +32,7 @@
   
   padding:60px 30px;
   border-radius: 5px;
-  background-color: #111111;
+  background-color:#1a1a1acf;
   transition: all .3s ease;
 }
 .service:hover{

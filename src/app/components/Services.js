@@ -1,4 +1,5 @@
 // components/Services.js
+"use client";
 import { SlVector } from "react-icons/sl";
 import { GrDocumentPerformance } from "react-icons/gr";
 import { CiPalette } from "react-icons/ci";
@@ -6,6 +7,7 @@ import { TbDeviceMobileShare } from "react-icons/tb";
 import { GoArrowDownRight } from "react-icons/go";
 import { FaReact } from "react-icons/fa";
 import { BsBrowserChrome } from "react-icons/bs";
+import { motion } from "framer-motion";
 import styles from "./Services.module.css";
 
 const Services = () => {
@@ -48,9 +50,48 @@ const Services = () => {
     },
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3,
+      },
+    },
+  };
+
+  const serviceVariants = {
+    hidden: { y: 50, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 12,
+      },
+    },
+    hover: {
+      scale: 1.05,
+      boxShadow: "0 10px 25px rgba(0, 0, 0, 0.2)",
+      transition: {
+        type: "spring",
+        stiffness: 300,
+        damping: 15,
+      },
+    },
+  };
+
   return (
     <section id="services" className={styles.services}>
-      <div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        style={{ textAlign: "center", margin: "20px" }}
+      >
         <h2 className="heading">
           My <span style={{ color: "#df9306" }}>Services</span>{" "}
         </h2>
@@ -58,19 +99,30 @@ const Services = () => {
           Specialization in crafting user-centered web experiences that are
           visually appealing, responsive, and performant.
         </p>
-      </div>
-      <div className={styles.grid}>
+      </motion.div>
+      <motion.div
+        className={styles.grid}
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         {services.map((service, index) => (
-          <div key={index} className={styles.service}>
+          <motion.div
+            key={index}
+            className={styles.service}
+            variants={serviceVariants}
+            whileHover="hover"
+          >
             <div className={styles.icon}>
               <service.icon className={styles.i} />
             </div>
             <h3>{service.title}</h3>
             <p>{service.description}</p>
             <GoArrowDownRight className={styles.ic} />
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };

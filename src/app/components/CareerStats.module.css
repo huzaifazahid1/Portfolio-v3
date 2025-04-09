@@ -1,0 +1,138 @@
+.section {
+  padding: 4rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.headerContainer {
+  margin-bottom: 3rem;
+}
+
+.statsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.statCard {
+  flex: 1;
+  min-width: 220px;
+  max-width: 280px;
+  padding: 2rem 1.5rem;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.statCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #df9306, transparent);
+  opacity: 0.7;
+}
+
+.statCard::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  z-index: -1;
+}
+
+.iconContainer {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  background: rgba(223, 147, 6, 0.2);
+  color: #df9306;
+  font-size: 1.8rem;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(223, 147, 6, 0.3);
+}
+
+.statCard:hover .iconContainer {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(223, 147, 6, 0.3);
+}
+
+.statCount {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+  background: linear-gradient(to right, #df9306, #f8b74c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.statLabel {
+  font-size: 1rem;
+  color: #ccc;
+  margin-top: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .statsContainer {
+    gap: 1.5rem;
+  }
+
+  .statCard {
+    min-width: 200px;
+    padding: 1.5rem 1rem;
+  }
+
+  .iconContainer {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+
+  .statCount {
+    font-size: 1.8rem;
+  }
+
+  .statLabel {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 3rem 1rem;
+  }
+
+  .statsContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .statCard {
+    width: 100%;
+    max-width: 320px;
+  }
+}
