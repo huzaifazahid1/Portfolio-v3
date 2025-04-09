@@ -11,7 +11,7 @@ export default function WhatsAppWidget() {
   const handleSend = () => {
     if (!message.trim()) return;
     const encoded = encodeURIComponent(message);
-    const phone = '923001234567'; // your WhatsApp number (no +, dashes)
+    const phone = '923296308609'; // your WhatsApp number (no +, dashes)
     window.open(`https://wa.me/${phone}?text=${encoded}`, '_blank');
     setMessage('');
     setOpen(false);
